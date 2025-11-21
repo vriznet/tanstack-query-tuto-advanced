@@ -13,6 +13,11 @@ const Home = () => {
           <li>
             <Link href="/contents/mutations">Mutations</Link>
           </li>
+          <li>
+            <Link href="/contents/mutations-persist-mutations">
+              Mutations - Persist Mutations
+            </Link>
+          </li>
         </ol>
       </main>
     </div>
