@@ -21,6 +21,9 @@ const Home = () => {
           <li>
             <Link href="/contents/create-random-todo">Create Random Todo</Link>
           </li>
+          <li>
+            <Link href="/contents/query-invalidation">Query Invalidation</Link>
+          </li>
         </ol>
       </main>
     </div>
