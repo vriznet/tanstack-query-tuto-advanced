@@ -1,9 +1,9 @@
 "use client";
 
-import { createTodo, getTodos } from "@/app/actions/todos";
+import { createRandomTodo, getTodos } from "@/app/actions/todos";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
-export default function Mutations() {
+export default function CreateRandomTodo() {
   const queryClient = useQueryClient();
 
   const { status, data, error } = useQuery({
@@ -12,8 +12,8 @@ export default function Mutations() {
   });
 
   const mutation = useMutation({
-    mutationFn: async (title: string) => {
-      const result = await createTodo(title);
+    mutationFn: async () => {
+      const result = await createRandomTodo();
       if (!result.success) {
         throw new Error(result.error);
       }
@@ -38,7 +38,7 @@ export default function Mutations() {
   return (
     <div>
       {mutation.isPending ? (
-        <p>Adding todo...</p>
+        <p>Adding random todo...</p>
       ) : (
         <>
           {mutation.isError ? (
@@ -51,7 +51,7 @@ export default function Mutations() {
 
           <button
             onClick={() => {
-              mutation.mutate(`Do Laundry - ${new Date().toLocaleString()}`);
+              mutation.mutate();
             }}
             disabled={mutation.isPending}
           >
@@ -62,7 +62,8 @@ export default function Mutations() {
       <ul>
         {data?.map((todo) => (
           <li key={todo.id}>
-            {todo.title} {todo.completed ? "(Completed)" : "(Not Completed)"}
+            {todo.title} {todo.completed ? "(Completed)" : "(Not Completed)"}{" "}
+            {", Todo version: " + todo.version}
           </li>
         ))}
       </ul>

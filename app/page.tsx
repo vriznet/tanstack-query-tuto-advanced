@@ -18,6 +18,9 @@ const Home = () => {
               Mutations - Persist Mutations
             </Link>
           </li>
+          <li>
+            <Link href="/contents/create-random-todo">Create Random Todo</Link>
+          </li>
         </ol>
       </main>
     </div>
