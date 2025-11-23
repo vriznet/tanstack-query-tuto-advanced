@@ -61,3 +61,35 @@ export async function createRandomTodo() {
     };
   }
 }
+
+export async function editTodo(
+  id: string,
+  editFields: {
+    title?: string;
+    completed?: boolean;
+    version?: number;
+  }
+) {
+  try {
+    const currentTodo = await prisma.todo.findUnique({
+      where: { id },
+    });
+    if (!currentTodo) {
+      throw new Error("Todo not found");
+    }
+    const updatedTodo = await prisma.todo.update({
+      where: { id },
+      data: {
+        title: editFields.title,
+        completed: editFields.completed,
+        version: editFields.version,
+      },
+    });
+    return { success: true, data: updatedTodo };
+  } catch (error) {
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : "Failed to edit todo",
+    };
+  }
+}

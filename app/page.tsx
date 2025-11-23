@@ -24,6 +24,11 @@ const Home = () => {
           <li>
             <Link href="/contents/query-invalidation">Query Invalidation</Link>
           </li>
+          <li>
+            <Link href="/contents/updates-from-mutation-responses">
+              Updates from Mutation Responses
+            </Link>
+          </li>
         </ol>
       </main>
     </div>
