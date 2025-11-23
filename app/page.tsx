@@ -34,6 +34,12 @@ const Home = () => {
               Optimistic Updates - Via the UI
             </Link>
           </li>
+          <li>
+            <Link href="/contents/optimistic-updates-via-ui-use-mutation-state">
+              Optimistic Updates - Via the UI - If the mutation and the query
+              don't live in the same component (useMutationState)
+            </Link>
+          </li>
         </ol>
       </main>
     </div>
