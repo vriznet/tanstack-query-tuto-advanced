@@ -29,6 +29,11 @@ const Home = () => {
               Updates from Mutation Responses
             </Link>
           </li>
+          <li>
+            <Link href="/contents/optimistic-updates-via-ui">
+              Optimistic Updates - Via the UI
+            </Link>
+          </li>
         </ol>
       </main>
     </div>
