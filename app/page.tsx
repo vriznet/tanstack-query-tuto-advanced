@@ -40,6 +40,11 @@ const Home = () => {
               don't live in the same component (useMutationState)
             </Link>
           </li>
+          <li>
+            <Link href="/contents/optimistic-updates-via-cache">
+              Optimistic Updates - Via the cache
+            </Link>
+          </li>
         </ol>
       </main>
     </div>
