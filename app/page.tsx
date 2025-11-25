@@ -45,6 +45,11 @@ const Home = () => {
               Optimistic Updates - Via the cache
             </Link>
           </li>
+          <li>
+            <Link href="/contents/optimistic-updates-via-cache-single-todo">
+              Optimistic Updates - Via the cache - Single Todo
+            </Link>
+          </li>
         </ol>
       </main>
     </div>
