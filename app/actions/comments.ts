@@ -70,6 +70,18 @@ export async function getCommentById(id: string) {
   }
 }
 
+export async function getCommentsByArticleId(articleId: string) {
+  try {
+    const comments = await prisma.comment.findMany({
+      where: { articleId },
+      orderBy: { createdAt: "desc" },
+    });
+    return comments;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 export async function createRandomComment() {
   try {
     const timestamp = Date.now();

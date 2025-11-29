@@ -73,6 +73,11 @@ const Home = () => {
               Performance Request Waterfall - Single Component
             </Link>
           </li>
+          <li>
+            <Link href="/contents/performance-request-waterfall-nested-component">
+              Performance Request Waterfall - Nested Component
+            </Link>
+          </li>
         </ol>
       </main>
     </div>
