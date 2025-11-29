@@ -50,6 +50,24 @@ const Home = () => {
               Optimistic Updates - Via the cache - Single Todo
             </Link>
           </li>
+          <li>
+            <Link href="/contents/create-random-user">Create Random User</Link>
+          </li>
+          <li>
+            <Link href="/contents/create-random-project">
+              Create Random Project
+            </Link>
+          </li>
+          <li>
+            <Link href="/contents/create-random-article">
+              Create Random Article
+            </Link>
+          </li>
+          <li>
+            <Link href="/contents/create-random-comment">
+              Create Random Comment
+            </Link>
+          </li>
         </ol>
       </main>
     </div>

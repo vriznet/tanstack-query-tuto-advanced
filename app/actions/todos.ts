@@ -13,6 +13,7 @@ export async function createTodo(title: string) {
 
     return { success: true, data: todo };
   } catch (error) {
+    console.log(error);
     return {
       success: false,
       error: error instanceof Error ? error.message : "Failed to create todo",
