@@ -68,6 +68,11 @@ const Home = () => {
               Create Random Comment
             </Link>
           </li>
+          <li>
+            <Link href="/contents/performance-request-waterfall-single-component">
+              Performance Request Waterfall - Single Component
+            </Link>
+          </li>
         </ol>
       </main>
     </div>

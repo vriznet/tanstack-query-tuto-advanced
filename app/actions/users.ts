@@ -43,6 +43,17 @@ export async function getUserById(id: string) {
   }
 }
 
+export async function getUserByEmail(email: string) {
+  try {
+    const user = await prisma.user.findUnique({
+      where: { email },
+    });
+    return user;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 export async function createRandomUser() {
   try {
     const timestamp = Date.now();

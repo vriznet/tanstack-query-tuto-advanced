@@ -55,6 +55,18 @@ export async function getProjectById(id: string) {
   }
 }
 
+export async function getProjectsByUserId(userId: string) {
+  try {
+    const projects = await prisma.project.findMany({
+      where: { userId },
+      orderBy: { createdAt: "desc" },
+    });
+    return projects;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 export async function createRandomProject() {
   try {
     const timestamp = Date.now();
