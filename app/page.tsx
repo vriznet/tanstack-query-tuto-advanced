@@ -69,6 +69,11 @@ const Home = () => {
             </Link>
           </li>
           <li>
+            <Link href="/contents/create-random-graph">
+              Create Random Graph
+            </Link>
+          </li>
+          <li>
             <Link href="/contents/performance-request-waterfall-single-component">
               Performance Request Waterfall - Single Component
             </Link>
@@ -81,6 +86,11 @@ const Home = () => {
           <li>
             <Link href="/contents/performance-request-waterfall-hoist-query">
               Performance Request Waterfall - Hoist Query
+            </Link>
+          </li>
+          <li>
+            <Link href="/contents/performance-request-waterfall-dependent-nested-component">
+              Performance Request Waterfall - Dependent Nested Component
             </Link>
           </li>
         </ol>

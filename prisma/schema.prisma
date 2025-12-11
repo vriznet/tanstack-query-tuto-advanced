@@ -44,14 +44,16 @@ model Project {
 }
 
 model Article {
-  id        String    @id @default(cuid())
+  id        String      @id @default(cuid())
   title     String
   content   String
+  type      ArticleType @default(STANDARD)
   authorId  String
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-  author    User      @relation(fields: [authorId], references: [id])
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  author    User        @relation(fields: [authorId], references: [id])
   comments  Comment[]
+  graphs    Graph[]
 }
 
 model Comment {
@@ -63,4 +65,19 @@ model Comment {
   updatedAt DateTime @updatedAt
   user      User     @relation(fields: [userId], references: [id])
   article   Article  @relation(fields: [articleId], references: [id])
+}
+
+model Graph {
+  id        String   @id @default(cuid())
+  name      String
+  data      Json
+  articleId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  article   Article  @relation(fields: [articleId], references: [id])
+}
+
+enum ArticleType {
+  STANDARD
+  GRAPHCONTAINED
 }
