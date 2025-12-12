@@ -2,7 +2,7 @@ import TanstackQueryProvider from "@/providers/TanstackQueryProvider";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TanStack Query - Queries",
+  title: "TanStack Query - Advanced",
   description:
     "A playground codespace for TanStack Official Docs - Guides & Concepts - Advanced",
 };

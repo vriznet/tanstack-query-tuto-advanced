@@ -93,6 +93,11 @@ const Home = () => {
               Performance Request Waterfall - Dependent Nested Component
             </Link>
           </li>
+          <li>
+            <Link href="/contents/performance-request-waterfall-code-splitting">
+              Performance Request Waterfall - Code Splitting
+            </Link>
+          </li>
         </ol>
       </main>
     </div>
