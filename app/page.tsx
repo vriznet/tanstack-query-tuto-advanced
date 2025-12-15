@@ -98,6 +98,9 @@ const Home = () => {
               Performance Request Waterfall - Code Splitting
             </Link>
           </li>
+          <li>
+            <Link href="/contents/prefetching-basics">Prefetching Basics</Link>
+          </li>
         </ol>
       </main>
     </div>

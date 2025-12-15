@@ -44,6 +44,30 @@ export async function getProjects() {
   }
 }
 
+// Infinite query 헬퍼: { items, nextCursor } 형태를 반환하여 getNextPageParam에 사용
+export async function getInfiniteProjects(
+  params: {
+    pageParam?: number;
+    limit?: number;
+  } = {}
+) {
+  const { pageParam = 0, limit = 10 } = params;
+  try {
+    const items = await prisma.project.findMany({
+      skip: pageParam,
+      take: limit,
+      orderBy: { createdAt: "desc" },
+    });
+
+    const nextCursor = items.length === limit ? pageParam + limit : null;
+
+    return { items, nextCursor };
+  } catch (error) {
+    console.error(error);
+    return { items: [], nextCursor: null };
+  }
+}
+
 export async function getProjectById(id: string) {
   try {
     const project = await prisma.project.findUnique({
