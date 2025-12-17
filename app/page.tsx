@@ -101,6 +101,11 @@ const Home = () => {
           <li>
             <Link href="/contents/prefetching-basics">Prefetching Basics</Link>
           </li>
+          <li>
+            <Link href="/contents/prefetching-in-components-simple">
+              Prefetching in Components - Simple
+            </Link>
+          </li>
         </ol>
       </main>
     </div>
