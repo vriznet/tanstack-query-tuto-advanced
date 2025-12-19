@@ -106,6 +106,11 @@ const Home = () => {
               Prefetching in Components - Simple
             </Link>
           </li>
+          <li>
+            <Link href="/contents/prefetching-in-components-use-prefetch-query">
+              Prefetching in Components - usePrefetchQuery
+            </Link>
+          </li>
         </ol>
       </main>
     </div>
